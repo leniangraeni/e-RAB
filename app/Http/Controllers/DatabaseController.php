@@ -21,7 +21,6 @@ class DatabaseController extends Controller
     }
     public function index() {
         $database = Database_harga::all();
-        dd($database);
         return view('database.index', compact('database'));
     }
 }
