@@ -14,7 +14,8 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    <div class="text-center"><a href="{{route ('database.create')}}" class="btn btn-large btn-primary openbutton" role="button">Database Harga</a></div>
+                    <div class="text-center"><a href="# " class="btn btn-large btn-primary openbutton" role="button">Buat RAB</a></div>
                 </div>
             </div>
         </div>

@@ -18,3 +18,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/database/create', 'DatabaseController@create')->name('database.create');
+Route::post('/database/create', 'DatabaseController@store')->name('database.store');
+Route::get('/database/{id}/edit', 'DatabaseController@edit')->name('database.edit');
+Route::patch('/database/{id}/edit', 'DatabaseController@update')->name('database.update');
+Route::delete('/database/{post}/delete', 'DatabaseController@destroy')->name('database.destroy');
