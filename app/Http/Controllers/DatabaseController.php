@@ -18,6 +18,10 @@ class DatabaseController extends Controller
         $new->category_barang = request('categorybarang_id');
         $new->save();
         return view('database.create');
-        
+    }
+    public function index() {
+        $database = Database_harga::all();
+        dd($database);
+        return view('database.index', compact('database'));
     }
 }
