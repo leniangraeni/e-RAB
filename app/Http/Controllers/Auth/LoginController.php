@@ -34,17 +34,6 @@ class LoginController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest')->except('logout');
+        $this->middleware('guest', ['except' => 'logout']);
     }
-
-    /*public function decide() {
-        $button = request('submitbtn');
-        if ($button == 'pencari') {
-            $role = 0;
-            return redirect()->route('home',compact('role'));
-        }else{
-            $role = 1;
-            return redirect()->route('home',compact('role'));
-        };*/
-};
-
+}

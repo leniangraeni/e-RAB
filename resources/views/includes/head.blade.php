@@ -46,6 +46,9 @@
       color: white;
       padding-bottom: 20px;
     }
+    h3{
+      color: white;
+    }
     </style>
   </head>
 </html>

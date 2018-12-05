@@ -19,7 +19,7 @@
     <div class="col">
       <div class="card2">
       <div class="container">
-        <form action="/action_page.php">
+        <form>
           <div class="form-group">
             <label for="email">Email:</label>
             <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
@@ -31,7 +31,7 @@
           <div class="checkbox">
             <label><input type="checkbox" name="remember"> Remember me</label>
           </div>
-          <button type="submit" class="btn btn-default">Submit</button>
+          <a href="{{( url('/dash'))}}">next</a>
         </form>
       </div>
       </div>
