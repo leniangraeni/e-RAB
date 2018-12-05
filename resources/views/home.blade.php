@@ -1,17 +1,27 @@
 @extends('layouts.app')
-
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
-
-                <div class="panel-body">
-                    You are logged in!
-                </div>
-            </div>
-        </div>
+<a href="#" class="btn">
+  <div class="card" style="width:400px; top:10px;">
+    <img class="card-img-top">
+    <div class="card-body">
+      <h4 class="card-title">Buat Baru</h4>
+      <p class="card-text"></p>
     </div>
+  </div>
+</a>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12 bg-dark">
+      <h3>Project Anda</h3>
+    </div>
+  </div>
 </div>
-@endsection
+<div class="card" style="width:400px; top:10px;">
+  <img class="card-img-top" src="home1.jpg" alt="Card image">
+  <div class="card-body">
+    <h4 class="card-title">Iwan Pamulang</h4>
+    <p class="card-text">Rumah pribadi 00m x 00m</p>
+    <a href="#" class="btn btn-primary">Lihat Detail</a>
+  </div>
+</div>
+@stop

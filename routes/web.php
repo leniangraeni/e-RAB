@@ -12,17 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('pages.home');
+    return view('welcome');
 });
 
-Route::get('login', function() {
-  return view('auth.login');
+Route::get('/welcome', function () {
+  return view('welcome');
 });
-
-Route::get('dash', function() {
-  return view('pages.dash');
-});
-
 
 Auth::routes();
 
@@ -33,7 +28,3 @@ Route::post('/database/create', 'DatabaseController@store')->name('database.stor
 Route::get('/database/{id_barang}/edit', 'DatabaseController@edit')->name('database.edit');
 Route::patch('/database/{id_barang}/edit', 'DatabaseController@update')->name('database.update');
 Route::delete('/database/{post}/delete', 'DatabaseController@destroy')->name('database.destroy');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');
