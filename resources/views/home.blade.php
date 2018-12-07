@@ -1,27 +1,24 @@
 @extends('layouts.app')
+
 @section('content')
-<a href="#" class="btn">
-  <div class="card" style="width:400px; top:10px;">
-    <img class="card-img-top">
-    <div class="card-body">
-      <h4 class="card-title">Buat Baru</h4>
-      <p class="card-text"></p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">e-RAB</div>
+
+                <div class="panel-body">
+                    @if (session('status'))
+                        <div class="alert alert-success">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+
+                    <div class="text-center"><a href="{{route ('database.index')}}" class="btn btn-large btn-primary openbutton" role="button">Database Harga</a></div>
+                    <div class="text-center"><a href="# " class="btn btn-large btn-primary openbutton" role="button">Buat RAB</a></div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</a>
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-12 bg-dark">
-      <h3>Project Anda</h3>
-    </div>
-  </div>
 </div>
-<div class="card" style="width:400px; top:10px;">
-  <img class="card-img-top" src="home1.jpg" alt="Card image">
-  <div class="card-body">
-    <h4 class="card-title">Iwan Pamulang</h4>
-    <p class="card-text">Rumah pribadi 00m x 00m</p>
-    <a href="#" class="btn btn-primary">Lihat Detail</a>
-  </div>
-</div>
-@stop
+@endsection
