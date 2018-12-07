@@ -15,11 +15,19 @@
         </div>
         <div class="form-group">
         <label for="">Kualitas Barang:</label>
-           <select name="categorybarang_id" id="" class="form-control">
+           <select name="kualitasbarang_id" id="" class="form-control">
            <option value="Tinggi">Tinggi</option>
            <option value="Sedang">Sedang</option>
            <option value="Rendah">Rendah</option>
 
+           </select>
+        </div>
+           <div class="form-group">
+            <label for="">Kategori Barang:</label>
+           <select name="categorybarang_id" id="" class="form-control">
+           <option value="Atap">Atap</option>
+           <option value="Dinding">Dinding</option>
+           <option value="Lantai">Lantai</option>
            </select>
             
         </div>

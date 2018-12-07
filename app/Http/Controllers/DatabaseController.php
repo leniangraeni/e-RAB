@@ -17,6 +17,7 @@ class DatabaseController extends Controller
         $new->harga_barang = request('harga');
         $new->category_barang = request('categorybarang_id');
         $new->id_barang = request('id_barang');
+        $new->kualitas_barang = request('kualitasbarang_id');
         $new->save();
         return redirect('/database');
     }

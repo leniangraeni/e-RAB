@@ -13,6 +13,7 @@
                             <h3 class="card-title"><strong>{{$database->nama_barang}}</strong></h3>
                             <h5 class="price">Rp. {{$database->harga_barang}}</h5>
                             <h5 class="card-title text-warning">{{$database->category_barang}}</strong></h5>
+                            <h5 class="card-title text-warning">{{$database->kualitas_barang}}</strong></h5>
                             <a href="{{ route('database.edit', $database) }}" class="btn btn-primary" >Edit</a>
                         </div>
 			        </div>

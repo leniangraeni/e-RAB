@@ -18,6 +18,7 @@ class CreateDatabaseHargasTable extends Migration
             $table->string('nama_barang');
             $table->string('harga_barang');
             $table->string('category_barang');
+            $table->string('kualitas_barang');
             $table->timestamps();
         });
     }
