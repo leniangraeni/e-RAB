@@ -1,6 +1,6 @@
 @extends('layouts.default')
 @section('content')
-    <a href="#" class="btn">
+    <a href="{{route('hitung.create')}}" class="btn">
       <div class="card" style="width:400px; top:10px;">
         <img class="card-img-top">
         <div class="card-body">

@@ -32,3 +32,10 @@ Route::post('/database/create', 'DatabaseController@store')->name('database.stor
 Route::get('/database/{id_barang}/edit', 'DatabaseController@edit')->name('database.edit');
 Route::patch('/database/{id_barang}/edit', 'DatabaseController@update')->name('database.update');
 Route::delete('/database/{post}/delete', 'DatabaseController@destroy')->name('database.destroy');
+
+Route::get('/hitungRAB/create', 'HitungController@create')->name('hitung.create');
+Route::post('/hitungRAB/create', 'HitungController@store')->name('hitung.store');
+Route::get('/hitungRAB/{id_barang}/edit', 'HitungController@edit')->name('hitung.edit');
+Route::get('/hitungRAB', 'HitungController@index')->name('hitung.index');
+Route::patch('/hitungRAB{id_barang}/edit', 'HitungController@update')->name('hitung.update');
+Route::delete('hitungRAB/{post}/delete', 'HitungController@destroy')->name('hitung.destroy');
