@@ -1,10 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
+
     <div class="container">
+      <div class="card text-center" style="width:250px;height:350px;">
+          <a href="{{ route('database.create') }}" class="btn btn-primary" >Tambah</a>
+      </div>
             @foreach($database as $database)
                  <div class="col-sm-3">
-			        <div class="card text-center" style="width:250px;height:350px;">
+			            <div class="card text-center" style="width:250px;height:350px;">
                         <div class="card-body">
                             <h3 class="card-title"><strong>{{$database->nama_barang}}</strong></h3>
                             <h5 class="price">Rp. {{$database->harga_barang}}</h5>
@@ -46,3 +50,4 @@
   opacity: 0.7;
 } 
 </style>
+

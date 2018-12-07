@@ -11,14 +11,14 @@ class DatabaseController extends Controller
         return view ('database.create');
     }
     public function store(Request $request) {
-        
+            
         $new = new Database_harga;
         $new->nama_barang = request('nama_barang');
         $new->harga_barang = request('harga');
         $new->category_barang = request('categorybarang_id');
         $new->id_barang = request('id_barang');
         $new->save();
-        return view('database.create');
+        return redirect('/database');
     }
     public function index() {
         $database = Database_harga::all();
