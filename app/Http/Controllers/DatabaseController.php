@@ -13,11 +13,11 @@ class DatabaseController extends Controller
     public function store(Request $request) {
             
         $new = new Database_harga;
-        $new->nama_barang = request('nama_barang');
-        $new->harga_barang = request('harga');
-        $new->category_barang = request('categorybarang_id');
-        $new->id_barang = request('id_barang');
-        $new->kualitas_barang = request('kualitasbarang_id');
+        $new->nama_pekerjaan = request('nama_pekerjaan');
+        $new->biaya_pekerjaan = request('harga');
+        $new->category_pekerjaan = request('categorypekerjaan_id');
+        $new->id_pekerjaan = request('id_pekerjaan');
+        $new->kualitas_pekerjaan = request('kualitaspekerjaan_id');
         $new->save();
         return redirect('/database');
     }
@@ -25,17 +25,17 @@ class DatabaseController extends Controller
         $database = Database_harga::all();
         return view('database.index', compact('database'));
     }
-    public function edit ($id_barang) {
-        $database = Database_harga::find($id_barang);
+    public function edit ($id_pekerjaan) {
+        $database = Database_harga::find($id_pekerjaan);
         return view('database.edit', compact('database'));
     }
-    public function update ($id_barang){
-        $database = Database_harga::find($id_barang);
+    public function update ($id_pekerjaan){
+        $database = Database_harga::find($id_pekerjaan);
         $database->update([
-            'nama_barang'=> request ('nama_barang'),
-            'harga_barang' => request('harga'),
-            'category_barang' => request('categorybarang_id'),
-            'id_barang' => request('id_barang')
+            'nama_pekerjaan'=> request ('nama_pekerjaan'),
+            'biaya_pekerjaan' => request('harga'),
+            'category_pekerjaan' => request('categorypekerjaan_id'),
+            'id_pekerjaan' => request('id_pekerjaan')
         ]);
         return redirect()->route('database.index',compact('database'));
     }

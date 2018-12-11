@@ -14,11 +14,10 @@ class CreateDatabaseHargasTable extends Migration
     public function up()
     {
         Schema::create('database_hargas', function (Blueprint $table) {
-            $table->increments('id_barang');
-            $table->string('nama_barang');
-            $table->string('harga_barang');
-            $table->string('category_barang');
-            $table->string('kualitas_barang');
+            $table->increments('id_pekerjaan');
+            $table->string('nama_pekerjaan');
+            $table->string('biaya_pekerjaan');
+            $table->string('kualitas_pekerjaan');
             $table->timestamps();
         });
     }

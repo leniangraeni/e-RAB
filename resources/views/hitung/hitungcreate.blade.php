@@ -18,8 +18,8 @@
             <input type="number" min=0 step=0.01 class="form-control" name="luas_atap" placeholder="Luas Atap">
         </div>
         <div class="form-group">
-        <label for="">Kualitas Barang:</label>
-           <select name="categorybarang_id" id="" class="form-control">
+        <label for="">Kualitas pekerjaan:</label>
+           <select name="categorypekerjaan_id" id="" class="form-control">
            <option value="Tinggi">Tinggi</option>
            <option value="Sedang">Sedang</option>
            <option value="Rendah">Rendah</option>
