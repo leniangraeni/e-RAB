@@ -7,6 +7,7 @@
       {{-- Bootstrap --}}
       <!-- Latest compiled and minified CSS -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
       <!-- jQuery library -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -22,7 +23,7 @@
       {{-- Font Awesome 5.2.0 --}}
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <style>
-    .navbar-dark {
+    .navbar {
       color: white;
     }
     body, html {
@@ -48,6 +49,42 @@
     }
     h3{
       color: white;
+    }
+    .panel {
+      background-color: rgba(1,1,1,0.5);
+      border-radius: 5px;
+      padding: 10px;
+      color: white;
+    }
+    .btn {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+    .nav {
+      color: white;
+    }
+    .navnih {
+      padding: 5px;
+    }
+    .buatbaru {
+      top: 50px;
+      bottom: 50px;
+    }
+    .containercard {
+      width: 300px;
+      height: auto;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      top: 51px;
+    }
+    .col-sm-12 {
+      top: 50px;
+      bottom: 50px;
+    }
+    .container1 {
+      margin-top: 100px;;
     }
     </style>
   </head>
