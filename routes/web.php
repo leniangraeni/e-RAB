@@ -19,19 +19,6 @@ Route::get('/login', function () {
   return view('login');
 });
 
-Route::get('/inputluas', function () {
-  return view('inputluas');
-});
-
-Route::get('/hasiloutput', function () {
-  return view('hasiloutput');
-});
-
-Route::get('/dash', function () {
-  return view('dash');
-});
-
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

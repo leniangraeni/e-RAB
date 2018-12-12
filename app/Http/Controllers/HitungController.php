@@ -39,11 +39,15 @@ class HitungController extends Controller
         }
         $baru->hasil = $total;
         $baru->save();
-        return redirect('/hitungRAB');
+        
+        $luas = request('luas_bangunan');
+        return view('hitung.indexhitung', compact('luas', 'atribut','total'));
     }
+    
     public function index() {
         $post = Hitung_post::all();
-        return view('hitung.indexhitung', compact('hitung'));
+        
+        return view('hitung.indexhitung', compact('hitung'));        
     }
     public function edit ($id_post) {
         $post = Hitung_post::find($id_post);
