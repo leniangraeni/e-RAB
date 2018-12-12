@@ -59,6 +59,8 @@
     .btn {
       padding-left: 16px;
       padding-right: 16px;
+      margin-left: 5px;
+      margin-bottom: 15px;
     }
     .nav {
       color: white;
@@ -85,6 +87,9 @@
     }
     .container1 {
       margin-top: 100px;;
+    }
+    .button {
+      padding: 5px;
     }
     </style>
   </head>
