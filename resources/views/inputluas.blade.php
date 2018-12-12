@@ -11,8 +11,10 @@
           <h4>Nama Project:</h4>
         </div>
         <div class="panel-body">
+        <form action="{{ route('hitung.store')}}" method="post">
+        {{csrf_field()}}
           <div class="form-group">
-            <input id="namaproject" type="text" class="form-control" name="namaproject" required autofocus>
+            <input id="nama_project" type="text" class="form-control" name="nama_project" required autofocus>
           </div>
         </div>
         <div class="panel-heading">
@@ -20,26 +22,37 @@
         </div>
         <div class="panel-body">
           <div class="form-group">
-            <input id="luas" type="number" class="form-control" name="luas" required autofocus>
+            <input type="number" class="form-control" name="luas_bangunan" placeholder="Luas Bangunan">
           </div>
-          <div class="form-check-inline">
+          
+          <!-- <div class="form-check-inline">
             <label class="form-check-label" for="sederhana">
-              <input id="sederhana" type="radio" class="form-check-input" name="optradio"> Sederhana
+              <input id="sederhana" type="radio" class="form-check-input" name="optradio" value="Rendah"> Sederhana
             </label>
           </div>
           <div class="form-check-inline">
             <label class="form-check-label" for="menengah">
-              <input id="menengah" type="radio" class="form-check-input" name="optradio"> Menengah
+              <input id="menengah" type="radio" class="form-check-input" name="optradio" value="Sedang"> Menengah
             </label>
           </div>
           <div class="form-check-inline">
             <label class="form-check-label" for="mewah">
-              <input id="mewah" type="radio" class="form-check-input" name="optradio"> Mewah
+              <input id="mewah" type="radio" class="form-check-input" name="optradio"value="Tinggi"> Mewah
             </label>
-          </div>
+          </div> -->
+          <div class="form-group">
+          <h4>Kualitas:</h4>
+           <select name="kualitas" id="" class="form-control">
+           <option value="Sedang">Menengah</option>
+           <option value="Rendah">Sederhana</option>
+           <option value="Tinggi">Mewah</option>
+
+           </select>
+            
+        </div>
                 <p>  </p>
               <div class="d-flex justify-content-end">  
-                <div class="btn btn-info">next</div>
+              <input type="submit" class="btn btn-info" value="Hitung" >
               </div>
         </div>
       </div>

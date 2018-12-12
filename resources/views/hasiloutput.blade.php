@@ -8,7 +8,7 @@
       <tr>
         <th>No.</th>
         <th>Uraian Pekerjaan</th>
-        <th>Jumalah Harga (Rp)</th>
+        <th>Jumlah Harga (Rp)</th>
       </tr>
     </thead>
     <tbody>

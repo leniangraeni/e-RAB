@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Hitung_post;
+use App\Test;
 
 class HitungController extends Controller
 {
@@ -12,11 +13,32 @@ class HitungController extends Controller
     }
     public function store(Request $request) {
         $new = new Hitung_post;
+        $new->nama_project = request('nama_project');
         $new->luas_bangunan = request('luas_bangunan');
-        $new->luas_tanah = request('luas_tanah');
-        $new->luas_atap = request('luas_atap');
-        $new->id_post = request('id_post');
+        $new->kualitas = request('kualitas');
         $new->save();
+
+        $baru = new Test;
+        $baru->I = request('luas_bangunan')*40862;
+        $baru->II = request('luas_bangunan')*1535156;
+        $baru->III = request('luas_bangunan')*846587;
+        $baru->IV = request('luas_bangunan')*320000;
+        $baru->V = request('luas_bangunan')*326931;
+        $baru->VI = request('luas_bangunan')*198990;
+        $baru->VII = request('luas_bangunan')*584447;
+        $baru->VIII = request('luas_bangunan')*44361;
+        $baru->IX = request('luas_bangunan')*162611;
+        $baru->X = request('luas_bangunan')*62038;
+        $baru->XI = request('luas_bangunan')*73005;
+        $baru->XII = request('luas_bangunan')*281045;
+        $baru->XIII = request('luas_bangunan')*5973;
+        $atribut = ($baru["attributes"]);
+        $total = 0;
+        foreach ($atribut as $key => $value) {
+            $total += $value;
+        }
+        $baru->hasil = $total;
+        $baru->save();
         return redirect('/hitungRAB');
     }
     public function index() {

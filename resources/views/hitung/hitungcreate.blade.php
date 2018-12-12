@@ -1,36 +1,68 @@
-@extends('layouts.app')
-
+@extends('layouts.default')
 @section('content')
 <div class="container">
-    <form action="{{ route('hitung.store')}}" method="post">
-        {{csrf_field()}}
-        <div class="form-group">
-        <label for="">Luas Bangunan :</label>
-            <input type="number" class="form-control" name="luas_bangunan" placeholder="Luas Bangunan">
-        </div>
+  <div class="row">
+    <div class="col">
 
-        <div class="form-group">
-        <label for="">Luas Tanah :</label>
-            <input type="number" min=0 step=0.01 class="form-control" name="luas_tanah" placeholder="Luas Tanah">
+    </div>
+    <div class="col">
+      <div class="panel panel default">
+        <div class="panel-heading">
+          <h4>Nama Project:</h4>
         </div>
-        <div class="form-group">
-        <label for="">Luas Atap :</label>
-            <input type="number" min=0 step=0.01 class="form-control" name="luas_atap" placeholder="Luas Atap">
+        <div class="panel-body">
+        <form action="{{ route('hitung.store')}}" method="post">
+        {{csrf_field()}}
+          <div class="form-group">
+            <input id="nama_project" type="text" class="form-control" name="nama_project" required autofocus>
+          </div>
         </div>
-        <div class="form-group">
-        <label for="">Kualitas pekerjaan:</label>
-           <select name="categorypekerjaan_id" id="" class="form-control">
-           <option value="Tinggi">Tinggi</option>
-           <option value="Sedang">Sedang</option>
-           <option value="Rendah">Rendah</option>
+        <div class="panel-heading">
+          <h4>Masukkan luas bangunan:</h4>
+        </div>
+        <div class="panel-body">
+          <div class="form-group">
+            <input type="number" class="form-control" name="luas_bangunan" placeholder="Luas Bangunan">
+          </div>
+        
+          <div class="form-group">
+          <h4>Kualitas:</h4>
+           <select name="kualitas" id="" class="form-control">
+           <option value="Sedang">Menengah</option>
+           <option value="Rendah">Sederhana</option>
+           <option value="Tinggi">Mewah</option>
 
            </select>
             
         </div>
-        
-        <div class="form-group">
-            <input type="submit" class="btn btn-primary" value="Hitung" >
+                <p>  </p>
+              <div class="d-flex justify-content-end">  
+              <input type="submit" class="btn btn-info" value="Hitung" >
+              </div>
         </div>
-    </form>
+      </div>
+    </div>
+    <div class="col">
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-7">
+
+    </div>
+    <div class="col-md-5">
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-7">
+
+    </div>
+    <div class="col-md-5">
+
+    </div>
+  </div>
 </div>
-@endsection
+
+
+@stop

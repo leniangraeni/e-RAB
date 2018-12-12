@@ -15,9 +15,9 @@ class CreateHitungPostsTable extends Migration
     {
         Schema::create('hitung_posts', function (Blueprint $table) {
             $table->increments('id_post');
+            $table->string('nama_project');
             $table->string('luas_bangunan');
-            $table->string('luas_tanah');
-            $table->string('luas_atap');
+            $table->string('kualitas');
             $table->timestamps();
         });
     }

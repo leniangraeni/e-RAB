@@ -13,10 +13,7 @@
         <label for="">Luas Tanah :</label>
             <input type="number" min=0 step=0.01 class="form-control" name="luas_tanah" placeholder="Luas Tanah">
         </div>
-        <div class="form-group">
-        <label for="">Luas Atap :</label>
-            <input type="number" min=0 step=0.01 class="form-control" name="luas_atap" placeholder="Luas Atap">
-        </div>
+       
         <div class="form-group">
         <label for="">Kualitas pekerjaan:</label>
            <select name="categorypekerjaan_id" id="" class="form-control">
