@@ -11,13 +11,14 @@
 <div class="col-sm-12 bg-dark">
   <h3>Project Anda</h3>
 </div>
-
+@foreach ($post as $hitung)
 <div class="card containercard" style="width:400px; top:50px;">
-  <img class="card-img-top" src="home1.jpg" alt="Card image">
   <div class="card-body">
-    <h4 class="card-title">Iwan Pamulang</h4>
-    <p class="card-text">Rumah pribadi 00m x 00m</p>
-    <a href="#" class="btn btn-primary">Lihat Detail</a>
+  {{csrf_field()}}
+    <h4 class="card-title">{{$hitung->nama_project}}</h4>
+    <p class="card-text">Rumah pribadi {{$hitung->luas_bangunan}} x {{$hitung->luas_bangunan}} </p>
+    <a href="" class="btn btn-primary">Lihat Detail</a>
   </div>
 </div>
+@endforeach
 @stop

@@ -24,22 +24,7 @@
           <div class="form-group">
             <input type="number" class="form-control" name="luas_bangunan" placeholder="Luas Bangunan">
           </div>
-          
-          <!-- <div class="form-check-inline">
-            <label class="form-check-label" for="sederhana">
-              <input id="sederhana" type="radio" class="form-check-input" name="optradio" value="Rendah"> Sederhana
-            </label>
-          </div>
-          <div class="form-check-inline">
-            <label class="form-check-label" for="menengah">
-              <input id="menengah" type="radio" class="form-check-input" name="optradio" value="Sedang"> Menengah
-            </label>
-          </div>
-          <div class="form-check-inline">
-            <label class="form-check-label" for="mewah">
-              <input id="mewah" type="radio" class="form-check-input" name="optradio"value="Tinggi"> Mewah
-            </label>
-          </div> -->
+
           <div class="form-group">
           <h4>Kualitas:</h4>
            <select name="kualitas" id="" class="form-control">

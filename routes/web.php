@@ -21,7 +21,7 @@ Route::get('/login', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HitungController@index')->name('home');
 Route::get('/database/create', 'DatabaseController@create')->name('database.create');
 Route::get('/database', 'DatabaseController@index')->name('database.index');
 Route::post('/database/create', 'DatabaseController@store')->name('database.store');
@@ -74,3 +74,7 @@ Route::get('/hitungRAB/{id_pekerjaan}/edit', 'HitungController@edit')->name('hit
 Route::get('/hitungRAB', 'HitungController@index')->name('hitung.index');
 Route::patch('/hitungRAB{id_pekerjaan}/edit', 'HitungController@update')->name('hitung.update');
 Route::delete('hitungRAB/{post}/delete', 'HitungController@destroy')->name('hitung.destroy');
+
+Route::get('/hasilouput', function () {
+  return view('hasiloutput');
+});

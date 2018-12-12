@@ -47,7 +47,7 @@ class HitungController extends Controller
     public function index() {
         $post = Hitung_post::all();
         
-        return view('hitung.indexhitung', compact('hitung'));        
+        return view('home', compact('post'));        
     }
     public function edit ($id_post) {
         $post = Hitung_post::find($id_post);
