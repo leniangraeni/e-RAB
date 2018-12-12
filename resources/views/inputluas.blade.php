@@ -8,6 +8,14 @@
     <div class="col">
       <div class="panel panel default">
         <div class="panel-heading">
+          <h4>Nama Project:</h4>
+        </div>
+        <div class="panel-body">
+          <div class="form-group">
+            <input id="namaproject" type="text" class="form-control" name="namaproject" required autofocus>
+          </div>
+        </div>
+        <div class="panel-heading">
           <h4>Masukkan luas bangunan:</h4>
         </div>
         <div class="panel-body">
