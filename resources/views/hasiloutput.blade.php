@@ -84,5 +84,10 @@
       </tr>
     </tbody>
   </table>
+  <div class="d-flex justify-content-end">
+    <button type="button" class="btn btn-danger">Discard</button>
+    <button type="button" class="btn btn-info">Save</button>
+  </div>
 </div>
+
 @stop
