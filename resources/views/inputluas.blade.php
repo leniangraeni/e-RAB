@@ -37,6 +37,10 @@
               <input id="mewah" type="radio" class="form-check-input" name="optradio"> Mewah
             </label>
           </div>
+                <p>  </p>
+              <div class="d-flex justify-content-end">  
+                <div class="btn btn-info">next</div>
+              </div>
         </div>
       </div>
     </div>
@@ -57,7 +61,7 @@
 
     </div>
     <div class="col-md-5">
-      <div class="btn btn-primary">next</div>
+
     </div>
   </div>
 </div>
