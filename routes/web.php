@@ -18,7 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::group(['middleware'=>'auth'], function(){
-    Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/home', 'HitungController@index')->name('home');
 
     Route::get('/harga', 'HargaController@index')->name('harga.index');
     Route::get('/harga/create', 'HargaController@create')->name('harga.create');

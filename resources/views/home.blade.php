@@ -19,5 +19,15 @@
     <div class="col-sm-12 bg-dark">
         <h3 style="text-align:center;">Project Anda</h3>
     </div>
-
+    
+    @foreach ($hitung as $hitung)
+        <div class="card containercard" style="width:400px; top:50px;">
+            <div class="card-body">
+            {{csrf_field()}}
+                <h4 class="card-title">{{$hitung->nama_project}}</h4>
+                <p class="card-text">Rumah pribadi {{$hitung->luas_bangunan}} x {{$hitung->luas_bangunan}} </p>
+                <a href="/hitung/{{$hitung->id}}/detail">Detail</a>
+            </div>
+        </div>
+    @endforeach
 @endsection

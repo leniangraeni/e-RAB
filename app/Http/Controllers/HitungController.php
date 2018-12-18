@@ -259,7 +259,7 @@ class HitungController extends Controller
     {
         $hitung = Hitung_Post::all();
        
-        return view('hitung.index', compact('hitung'));
+        return view('home', compact('hitung'));
     }
 
     public function detail($id)
