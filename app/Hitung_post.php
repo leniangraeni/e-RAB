@@ -4,8 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Hitung_post extends Model
+class Hitung_Post extends Model
 {
-    protected $primaryKey = 'id_post';
-    protected $fillable=['luas_bangunan','nama_project','kualitas'];
+    protected $fillable = ['nama_project', 'luas_bangunan', 'kualitas'];
 }

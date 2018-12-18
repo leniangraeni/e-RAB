@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDatabaseHargasTable extends Migration
+class CreateHargaSatuansTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateDatabaseHargasTable extends Migration
      */
     public function up()
     {
-        Schema::create('database_hargas', function (Blueprint $table) {
-            $table->increments('id_pekerjaan');
+        Schema::create('harga__satuans', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('kode_pekerjaan');
             $table->string('nama_pekerjaan');
-            $table->string('biaya_pekerjaan');
-            $table->string('kualitas_pekerjaan');
+            $table->integer('harga');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateDatabaseHargasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('database_hargas');
+        Schema::dropIfExists('harga_satuans');
     }
 }

@@ -13,10 +13,10 @@ class CreateHitungPostsTable extends Migration
      */
     public function up()
     {
-        Schema::create('hitung_posts', function (Blueprint $table) {
-            $table->increments('id_post');
+        Schema::create('hitung__posts', function (Blueprint $table) {
+            $table->increments('id');
             $table->string('nama_project');
-            $table->string('luas_bangunan');
+            $table->decimal('luas_bangunan');
             $table->string('kualitas');
             $table->timestamps();
         });
@@ -29,6 +29,6 @@ class CreateHitungPostsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('posts');
+        Schema::dropIfExists('hitung_posts');
     }
 }

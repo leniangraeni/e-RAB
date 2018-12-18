@@ -55,6 +55,7 @@
       border-radius: 5px;
       padding: 10px;
       color: white;
+      margin: 5px;
     }
     .btn {
       padding-left: 16px;
@@ -90,6 +91,10 @@
     }
     .button {
       padding: 5px;
+    }
+    .col-md-8 {
+      padding: 5px;
+      top: 70px;
     }
     </style>
   </head>

@@ -16,10 +16,10 @@
                 <!-- Authentication Links -->
               @if (Auth::guest())
               <div class="navnih">
-                <li><a href="{{ url('register') }}"><span class="glyphicon glyphicon-user"></span> Register</a></li>
+                <li><a href="{{ url('login') }}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
               </div>
               <div class="navnih">
-                <li><a href="{{ url('login') }}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li><a href="{{ url('register') }}"><span class="glyphicon glyphicon-user"></span> Register</a></li>
               </div>
               @else
                   <li class="dropdown">
