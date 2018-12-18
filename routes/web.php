@@ -32,5 +32,5 @@ Route::group(['middleware'=>'auth'], function(){
     Route::get('/hitung/{id}/edit', 'HitungController@edit')->name('hitung.edit');
     Route::patch('/hitung/{id}/edit','HitungController@update')->name('hitung.update');
 
-    Route::get('/data/{id}', 'HitungController@coba')->name('hitung.coba');
+    Route::get('/hitung/{id}/detail', 'HitungController@detail')->name('hitung.detail');
 });

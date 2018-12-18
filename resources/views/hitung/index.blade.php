@@ -10,6 +10,7 @@
                         <div class="panel-body">
                             <p> {{ $hitung->luas_bangunan }} </p>
                             <p> {{ $hitung->kualitas}} </p>
+                            <a href="/hitung/{{$hitung->id}}/detail">Detail</a>
                         </div>
                     </div>
                @endforeach
@@ -17,3 +18,4 @@
         </div>
     </div>
 @endsection
+

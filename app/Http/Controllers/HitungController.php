@@ -27,6 +27,9 @@ class HitungController extends Controller
         $luas = request('luas_bangunan');
 
         $hasil = new Hasil;
+
+        $hasil->luas = $masuk->luas_bangunan;
+
         $data1 = Harga_Satuan::find($id=1); $data2 = Harga_Satuan::find($id=2); $data3 = Harga_Satuan::find($id=3);
         $data4 = Harga_Satuan::find($id=4); $data5 = Harga_Satuan::find($id=5); $data6 = Harga_Satuan::find($id=6); 
 
@@ -79,7 +82,7 @@ class HitungController extends Controller
 
         $data1 = Harga_Satuan::find($id=37); $data2 = Harga_Satuan::find($id=38); $data3 = Harga_Satuan::find($id=39); $data4 = Harga_Satuan::find($id=40);
         $data5 = Harga_Satuan::find($id=41); $data6 = Harga_Satuan::find($id=42); 
-    //lebih 2, 52
+    
         $hasil->J = request('luas_bangunan')*58/267.86*$data1->harga + request('luas_bangunan')*65/267.86*$data2->harga +
                     request('luas_bangunan')*67/267.86*$data3->harga + request('luas_bangunan')*1/267.86*$data4->harga +
                     request('luas_bangunan')*1/267.86*$data5->harga + request('luas_bangunan')*1/267.86*$data6->harga;
@@ -229,7 +232,6 @@ class HitungController extends Controller
         }
         $hasil->total = $total;
 
-        $hasil->hitung_id = $masuk->id;
         $save =  $hasil->total % 10;
         $hasil->total = $hasil->total - $save;
         if($save>=5){
@@ -258,5 +260,12 @@ class HitungController extends Controller
         $hitung = Hitung_Post::all();
        
         return view('hitung.index', compact('hitung'));
+    }
+
+    public function detail($id)
+    {
+        $hitung = Hasil::find($id);
+
+        return view('hitung.detail', compact('hitung'));
     }
 }

@@ -15,7 +15,7 @@ class CreateHasilsTable extends Migration
     {
         Schema::create('hasils', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('hitung_id');
+            $table->decimal('luas');
             $table->integer('A')->unsigned();
             $table->integer('B')->unsigned();
             $table->integer('C')->unsigned();
@@ -31,7 +31,7 @@ class CreateHasilsTable extends Migration
             $table->integer('M')->unsigned();
             $table->integer('total')->unsigned();
             $table->timestamps();
-            $table->foreign('hitung_id')->references('id')->on('hitung__posts')->onDelete('CASCADE');
+            $table->foreign('luas')->references('luas_bangunan')->on('hitung__posts')->onDelete('CASCADE');
         });
     }
 
