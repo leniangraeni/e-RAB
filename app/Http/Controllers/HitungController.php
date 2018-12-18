@@ -28,8 +28,6 @@ class HitungController extends Controller
 
         $hasil = new Hasil;
 
-        $hasil->luas = $masuk->luas_bangunan;
-
         $data1 = Harga_Satuan::find($id=1); $data2 = Harga_Satuan::find($id=2); $data3 = Harga_Satuan::find($id=3);
         $data4 = Harga_Satuan::find($id=4); $data5 = Harga_Satuan::find($id=5); $data6 = Harga_Satuan::find($id=6); 
 
@@ -241,18 +239,12 @@ class HitungController extends Controller
             $save = 0;
         }
         $hasil->total = $hasil->total + $save;
+        
+        $hasil->luas = $masuk->luas_bangunan;
+
         $hasil->save();
 
         return view('hitung.hasil', compact('luas', 'atribut', 'total'));
-    }
-
-    public function coba($id)
-    {
-        $baru = Harga_Satuan::find($id);
-        $masuk = Hitung_Post::find($id=18);
-        dd($baru->harga*$masuk->luas_bangunan);
-
-        return view('hitung.coba', compact('baru'));
     }
 
     public function index()
