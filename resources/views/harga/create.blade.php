@@ -22,7 +22,7 @@
         </div>
         <div class="panel-body">
           <div class="form-group">
-            <input type="decimal" class="form-control" name="nama_pekerjaan" placeholder="Masukkan nama pekerjaan">
+            <input type="text" class="form-control" name="nama_pekerjaan" placeholder="Masukkan nama pekerjaan">
           </div>
 
         <div class="panel-heading">

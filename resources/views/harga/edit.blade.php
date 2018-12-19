@@ -1,66 +1,59 @@
-@extends('layouts.default')
+@extends('layouts.app')
 @section('content')
-<div class="container">
-  <div class="row">
-    <div class="col">
-    </div>
 
-    <div class="col">
-      <div class="panel panel default">
-        <div class="panel-heading">
-          <h4>Kode Pekerjaan:</h4>
-        </div>
-        <div class="panel-body">
-        <form class="" action="/harga/{{$harga->id}}/edit" method="post">
-        {{csrf_field()}}
-        {{method_field('PATCH')}}
-          <div class="form-group">
-          <input type="text" class="form-control" name="kode_pekerjaan" placeholder="Masukkan kode pekerjaan" value="{{$harga->kode_pekerjaan}}">
-          </div>
-        </div>
-        <div class="panel-heading">
-          <h4>Nama Pekerjaan:</h4>
-        </div>
-        <div class="panel-body">
-          <div class="form-group">
-            <input type="decimal" class="form-control" name="nama_pekerjaan" placeholder="Masukkan nama pekerjaan" value="{{$harga->nama_pekerjaan}}">
-          </div>
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <!-- <section class="content-header">
+      <h1>
+        General Form Elements
+        <small>Preview</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#">Forms</a></li>
+        <li class="active">General Elements</li>
+      </ol>
+    </section> -->
 
-        <div class="panel-heading">
-          <h4>Harga:</h4>
-        </div>
-        <div class="panel-body">
-          <div class="form-group">
-            <input type="number" class="form-control" name="harga" placeholder="Masukkan harga" value="{{$harga->harga}}">
-          </div>
-                <p>  </p>
-              <div class="d-flex justify-content-end">  
-              <input type="submit" class="btn btn-info" value="Simpan" >
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <!-- left column -->
+        <div class="col-md-14">
+          <!-- general form elements -->
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title"><b>Edit Harga Satuan</b></h3>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+            <form class="" action="/harga/{{$harga->id}}/edit" method="post">
+            {{csrf_field()}}
+            {{method_field('PATCH')}}
+            <form role="form">
+              <div class="box-body">
+                <div class="form-group">
+                  <label>Kode Pekerjaan</label>
+                  <input type="text" class="form-control" name="kode_pekerjaan" placeholder="Masukkan kode pekerjaan" value="{{$harga->kode_pekerjaan}}">
+                </div>
+                <div class="form-group">
+                  <label>Nama Pekerjaan</label>
+                  <input type="text" class="form-control" name="nama_pekerjaan" placeholder="Masukkan nama pekerjaan" value="{{$harga->nama_pekerjaan}}">
+                </div>
+                <div class="form-group">
+                  <label>Harga</label>
+                  <input type="number" class="form-control" name="harga" placeholder="Masukkan harga" value="{{$harga->harga}}">
+                </div>
               </div>
-        </div>
-      </div>
-    </div>
- </div>
-    <div class="col">
-    </div>
+              <!-- /.box-body -->
 
-  </div>
-  <div class="row">
-    <div class="col-md-7">
-
+              <div class="box-footer">
+                <button type="submit" class="btn btn-primary">Simpan</button>
+              </div>
+            </form>
+          </div>
+        </section>
     </div>
-    <div class="col-md-5">
-
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-7">
-
-    </div>
-    <div class="col-md-5">
-
-    </div>
-  </div>
 </div>
-
 @endsection
+
