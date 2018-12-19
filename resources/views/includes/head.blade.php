@@ -29,7 +29,7 @@
     body, html {
       height: 100%;
       font-family: "Lato", sans-serif;
-      background-color: rgb(66, 244, 238);
+      background-color: #3c8dbc;
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;

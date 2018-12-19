@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/table', function () {
+    return view('table');
+});
+
 Auth::routes();
 
 Route::group(['middleware'=>'auth'], function(){
@@ -26,7 +30,7 @@ Route::group(['middleware'=>'auth'], function(){
     Route::get('/harga/{id}/edit', 'HargaController@edit')->name('harga.edit');
     Route::patch('/harga/{id}/edit','HargaController@update')->name('harga.update');
 
-    Route::get('/hitung', 'HitungController@index')->name('hitung.index');
+    //Route::get('/hitung', 'HitungController@index')->name('hitung.index');
     Route::get('/hitung/create', 'HitungController@create')->name('hitung.create');
     Route::post('/hitung/create', 'HitungController@store')->name('hitung.store');
     Route::get('/hitung/{id}/edit', 'HitungController@edit')->name('hitung.edit');

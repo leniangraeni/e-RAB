@@ -3,7 +3,7 @@
 
 <div class="container container1">
   <h2>Perkiraan RAB</h2>
-  <p>Luas Bangunan: {{$hitung->luas}} </p>
+  <p>Luas Bangunan: {{$hitung->luas}} m<sup>2</sup></p>
   <table class="table table-dark table-hover">
     <thead>
       <tr>

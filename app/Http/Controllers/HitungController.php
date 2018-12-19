@@ -239,6 +239,8 @@ class HitungController extends Controller
             $save = 0;
         }
         $hasil->total = $hasil->total + $save;
+
+        $hasil->hitung_id = $masuk->id;
         
         $hasil->luas = $masuk->luas_bangunan;
 
@@ -250,8 +252,9 @@ class HitungController extends Controller
     public function index()
     {
         $hitung = Hitung_Post::all();
+        $hasil = Hasil::all();
        
-        return view('home', compact('hitung'));
+        return view('home', compact('hitung','hasil'));
     }
 
     public function detail($id)
