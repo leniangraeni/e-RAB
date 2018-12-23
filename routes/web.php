@@ -15,8 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/table', function () {
-    return view('table');
+Route::get('/hitung/detail-print', function () {
+    return view('hitung.detail-print');
 });
 
 Auth::routes();
