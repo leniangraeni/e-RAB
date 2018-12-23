@@ -23,4 +23,6 @@ git push origin master
 
 Pastiin udah pull sebelum kerja, kalo pullnya setelah kerja nanti hasil kerjaannya ketimpa
 
-jangan lupa migrate, ada tabel baru (8 des 2018) 
+Bikin database di laptopnya yaa
+
+Jangan lupa migrate
